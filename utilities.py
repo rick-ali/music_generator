@@ -34,7 +34,7 @@ def read_midi(file):
                     notes.append('.'.join(str(n) for n in element.normalOrder))
     return np.array(notes)
 
-def convert_to_midi(prediction_output, out_dir='predictions'):
+def convert_to_midi(prediction_output, out_dir='predictions', out_name='prediction.mid'):
     offset = 0
     output_notes = []
 
@@ -65,4 +65,4 @@ def convert_to_midi(prediction_output, out_dir='predictions'):
         # increase offset each iteration so that notes do not stack
         offset += 1
     midi_stream = stream.Stream(output_notes)
-    midi_stream.write('midi', fp=join(out_dir,'prediction.mid'))
+    midi_stream.write('midi', fp=join(out_dir,out_name))
