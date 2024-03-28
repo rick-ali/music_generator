@@ -5,7 +5,7 @@ Implemented the full pipeline and better organised in file/tasks to facilitate c
 
 Objectives: 
 - Understand how music data is handled and processed
-- Research better models (maybe GANs?)
+- Try different models
 - Implement multi instruments input-output
 
 # Instructions
